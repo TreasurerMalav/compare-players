@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Compare Players</title>
+      <style type="text/css">
+         .split {
+         height: 100%;
+         width: 50%;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         overflow-x: hidden;
+         padding-top: 20px;
+         }
+         /* Control the left side */
+         .left {
+         left: 0;
+         }
+         /* Control the right side */
+         .right {
+         right: 0;
+         }
+         /* If you want the content centered horizontally and vertically */
+         .centered {
+         position: absolute;
+         top: 50%;
+         left: 35%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+         }
+      </style>
+   </head>
+   <body style="background-color: beige">
+      <h1 align="center">Compare Players</h1>
+      <hr>
+      <div class="split left">
+         <div class="centered">
+            <p style="font-size: 25px"><b>{{player1}}</b></p>
+            <br><br>
+            <table border="1px" style="float: left;display: inline-block;">
+               <tr>
+                  <th colspan="2"><span><b><u>Batting and Fielding Performance</u></b></span></th>
+               </tr>
+               <tr>
+                  <td><b>Matches</b></td>
+                  <td>{{matches}}</td>
+               </tr>
+               <tr>
+                  <td><b>Innings</b></td>
+                  <td>{{innings}}</td>
+               </tr>
+               <tr>
+                  <td><b>Runs</b></td>
+                  <td>{{runs}}</td>
+               </tr>
+               <tr>
+                  <td><b>Highest</b></td>
+                  <td>{{highest}}</td>
+               </tr>
+               <tr>
+                  <td><b>Average</b></td>
+                  <td>{{average}}</td>
+               </tr>
+               <tr>
+                  <td><b>Strike Rate</b></td>
+                  <td>{{sr}}</td>
+               </tr>
+               <tr>
+                  <td><b>NotOuts</b></td>
+                  <td>{{notouts}}</td>
+               </tr>
+               <tr>
+                  <td><b>100s</b></td>
+                  <td>{{hundreds}}</td>
+               </tr>
+               <tr>
+                  <td><b>50s</b></td>
+                  <td>{{fifties}}</td>
+               </tr>
+               <tr>
+                  <td><b>Catches</b></td>
+                  <td>{{catches}}</td>
+               </tr>
+               <tr>
+                  <td><b>Stumpings</b></td>
+                  <td>{{stumpings}}</td>
+               </tr>
+            </table>
+            <table border="1px" style="float: left;display: inline-block;margin-left: 8px">
+               <tr>
+                  <th colspan="2"><span><b><u>Bowling Performance</u></b></span></th>
+               </tr>
+               <tr>
+                  <td><b>Matches</b></td>
+                  <td>{{matches}}</td>
+               </tr>
+               <tr>
+                  <td><b>Innings</b></td>
+                  <td>{{inningsb}}</td>
+               </tr>
+               <tr>
+                  <td><b>Wickets</b></td>
+                  <td>{{wickets}}</td>
+               </tr>
+               <tr>
+                  <td><b>Bowling Average</b></td>
+                  <td>{{averageb}}</td>
+               </tr>
+               <tr>
+                  <td><b>Economy</b></td>
+                  <td>{{economy}}</td>
+               </tr>
+               <tr>
+                  <td><b>Bowling Strike Rate</b></td>
+                  <td>{{srb}}</td>
+               </tr>
+               <tr>
+                  <td><b>BBI</b></td>
+                  <td>{{bestb}}</td>
+               </tr>
+               <tr>
+                  <td><b>Fifers</b></td>
+                  <td>{{fwkt}}</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="split right">
+         <div class="centered">
+            <p style="font-size: 25px"><b>{{player2}}</b></p>
+            <br><br>
+            <table border="1px" style="float: left;display: inline-block;">
+               <tr>
+                  <th colspan="2"><span><b><u>Batting and Fielding Performance</u></b></span></th>
+               </tr>
+               <tr>
+                  <td><b>Matches</b></td>
+                  <td>{{matches2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Innings</b></td>
+                  <td>{{innings2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Runs</b></td>
+                  <td>{{runs2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Highest</b></td>
+                  <td>{{highest2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Average</b></td>
+                  <td>{{average2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Strike Rate</b></td>
+                  <td>{{sr2}}</td>
+               </tr>
+               <tr>
+                  <td><b>NotOuts</b></td>
+                  <td>{{notouts2}}</td>
+               </tr>
+               <tr>
+                  <td><b>100s</b></td>
+                  <td>{{hundreds2}}</td>
+               </tr>
+               <tr>
+                  <td><b>50s</b></td>
+                  <td>{{fifties2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Catches</b></td>
+                  <td>{{catches2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Stumpings</b></td>
+                  <td>{{stumpings2}}</td>
+               </tr>
+            </table>
+            <table border="1px" style="float: left;display: inline-block;margin-left: 8px">
+               <tr>
+                  <th colspan="2"><span><b><u>Bowling Performance</u></b></span></th>
+               </tr>
+               <tr>
+                  <td><b>Matches</b></td>
+                  <td>{{matches2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Innings</b></td>
+                  <td>{{inningsb2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Wickets</b></td>
+                  <td>{{wickets2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Bowling Average</b></td>
+                  <td>{{averageb2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Economy</b></td>
+                  <td>{{economy2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Bowling Strike Rate</b></td>
+                  <td>{{srb2}}</td>
+               </tr>
+               <tr>
+                  <td><b>BBI</b></td>
+                  <td>{{bestb2}}</td>
+               </tr>
+               <tr>
+                  <td><b>Fifers</b></td>
+                  <td>{{fwkt2}}</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compare Players</title>
+</head>
+<body style="background-color: beige">
+	<h1 align="center">Compare Players</h1>
+	<form method="POST" align="center" padding="200px">
+		<select name="players" placeholder="Select Player1">
+			<option selected="selected" disabled="disabled">Select Player1</option>
+		    {% for player in players %}
+		    <option value= "{{player.Name}}">{{player.Name}}</option>"
+		    {% endfor %}
+		</select>
+
+		<select name="players2" placeholder="Select Player2">
+			<option selected="selected" disabled="disabled">Select Player2</option>
+		    {% for player in players %}
+		    <option value= "{{player.Name}}">{{player.Name}}</option>"
+		    {% endfor %}
+		</select>
+
+		<input type="submit" name="Submit">
+	</form>
+</body>
+</html>
