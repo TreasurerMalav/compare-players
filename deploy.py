@@ -171,7 +171,7 @@ def index():
 
         #return "<p style='margin-left:200px'>" + "<b>" + player1 + "</b>" +  "<br><br>" +"<u><b>Batting and Fielding Performance</b></u>" + "<br><b>Matches:</b> " + matches + "<br><b>Innings:</b> " + innings + "<br><b>NotOuts:</b> " + notouts + "<br><b>Runs:</b> " + runs + "<br><b>Highest:</b> " + highest + "<br><b>Average:</b> " + average + "<br><b>Balls Faced:</b> " + bf + "<br><b>Strike Rate:</b> " + sr + "<br><b>100s:</b> " + hundreds + "<br><b>50s:</b> " + fifties + "<br><b>Catches:</b> " + catches + "<br><b>Stumpings:</b> " + stumpings + "<br><br>" + "<u><b>Bowling Performance</b></u>" + "<br><b>Matches:</b> " + matchesb + "<br><b>Innings:</b> " + inningsb + "<br><b>Wickets:</b> " + wickets + "<br><b>Best Bowling Figure:</b> " + bestb + "<br><b>Bowling Average:</b> " + averageb + "<br><b>Economy:</b> " + economy + "<br><b>Bowling Strike Rate:</b> " + srb + "<br><b>5 Wickets Haul:</b> " + fwkt + "<br><br>" + player2 + matches2 + "</p>"
         
-    return render_template('index1.html', players=players)
+    return render_template('index.html', players=players)
 
 @app.route('/compare/<player1>/<player2>')
 def compare(player1, player2):
